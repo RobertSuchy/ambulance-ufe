@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface Cv2_rsAmbulanceWlList {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +24,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCv2_rsAmbulanceWlListElement extends Components.Cv2_rsAmbulanceWlList, HTMLStencilElement {
+    }
+    var HTMLCv2_rsAmbulanceWlListElement: {
+        prototype: HTMLCv2_rsAmbulanceWlListElement;
+        new (): HTMLCv2_rsAmbulanceWlListElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +37,13 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "cv2_rs-ambulance-wl-list": HTMLCv2_rsAmbulanceWlListElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface Cv2_rsAmbulanceWlList {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +59,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "cv2_rs-ambulance-wl-list": Cv2_rsAmbulanceWlList;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +67,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "cv2_rs-ambulance-wl-list": LocalJSX.Cv2_rsAmbulanceWlList & JSXBase.HTMLAttributes<HTMLCv2_rsAmbulanceWlListElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
