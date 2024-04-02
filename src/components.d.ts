@@ -12,6 +12,8 @@ export namespace Components {
         "basePath": string;
     }
     interface Cv2rsAmbulanceWlEditor {
+        "ambulanceId": string;
+        "apiBase": string;
         "entryId": string;
     }
     interface Cv2rsAmbulanceWlList {
@@ -81,6 +83,8 @@ declare namespace LocalJSX {
         "basePath"?: string;
     }
     interface Cv2rsAmbulanceWlEditor {
+        "ambulanceId"?: string;
+        "apiBase"?: string;
         "entryId"?: string;
         "onEditor-closed"?: (event: Cv2rsAmbulanceWlEditorCustomEvent<string>) => void;
     }
